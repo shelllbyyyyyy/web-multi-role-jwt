@@ -1,0 +1,76 @@
+// Create a user
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+  "name": "Shelby",
+  "email": "shelby@gmail.com",
+  "password": "0512",
+  "confPassword": "0512",
+  "role": "user"
+}
+
+### Get all User
+GET http://localhost:5000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNDIwNjU4NiIsImVfbWFpbCI6Im11dGlhcmFAZ21haWwuY29tIiwibmFtZSI6Ik11dGlhcmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4ODM4Mzc5NCwiZXhwIjoxNjg4MzgzODE0fQ.Cg_v_jcYT6bwjm9-wpqdvwim7_5-qWXrv_F8f91zuW0
+
+
+### Get single User
+GET http://localhost:5000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMDkyMDY2MCIsIm5hbWUiOiJBcmlmIFJhbWRhbmkiLCJlbWFpbCI6ImFyaWZAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg4NDYyMzIyLCJleHAiOjE2ODg0NjIzMzd9.6RvqpiewGMbIIzT0kvigQjTyWXkY_Gr6VgHELYvi0oc
+
+{
+  "email": "mutiara@gmail.com"
+}
+
+### Get Refresh Token
+GET http://localhost:5000/token
+
+
+### Update user
+PUT http://localhost:5000/user
+Content-Type: application/json
+
+{
+  "name": "Arif Ramdani",
+  "email": "arif@gmail.com",
+  "password": "0512",
+  "newPassword": "arif",
+  "confPassword": "arif"
+}
+
+### delete user
+DELETE http://localhost:5000/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxODU4NDY2NiIsImVfbWFpbCI6InNoZWxieUBnbWFpbC5jb20iLCJuYW1lIjoiU2hlbGJ5Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE2ODk3NjU5ODIsImV4cCI6MTY4OTc2NjAwMn0.q2AOPpoWR9-DUjUgKLzAfxYFLoMsj5ir1eXjXgVY0jk
+
+{
+  "email": "shelby@gmail.com"
+}
+
+### User login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "arif@gmail.com",
+  "password": "0512"
+}
+
+
+### User login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "mutiara@gmail.com",
+  "password": "0512"
+}
+
+
+### User logout
+DELETE http://localhost:5000/logout
+
+
+### Get Me
+GET http://localhost:5000/me
